@@ -1,7 +1,8 @@
 import { useState } from "react";
+import Buscador from "./Buscador";
+import GridGifs from "./GridGifs";
 
 function App() {
-  //Estado
   const [valorInput, setValorInput] = useState("");
   const [gifs, setGifs] = useState([]);
 
@@ -18,8 +19,6 @@ function App() {
     return data.data;
   };
 
-  //Ciclo de vida
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const gifs = await getGifs(valorInput);
@@ -29,12 +28,13 @@ function App() {
   //JSX
   return (
     <div className="App">
-      <form onSubmit={onSubmit}>
-        <input value={valorInput} onChange={onChange} />
-      </form>
-      {gifs.map((gif) => (
-        <img key={gif.id} src={gif.images.original.url} alt="" />
-      ))}
+      <Buscador
+        valorInput={valorInput}
+        onChange={onChange}
+        onSubmit={onSubmit}
+      />
+
+      <GridGifs gifs={gifs} />
     </div>
   );
 }
