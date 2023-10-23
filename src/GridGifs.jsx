@@ -2,11 +2,11 @@ import Gif from "./Gif";
 
 function GridGifs({ gifs }) {
   return (
-    <>
+    <div className="grid-gifs">
       {gifs.map((gif) => (
         <Gif key={gif.id} gif={gif} />
       ))}
-    </>
+    </div>
   );
 }
 

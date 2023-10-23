@@ -1,7 +1,7 @@
 function Gif({ gif }) {
   return (
     <>
-      <img src={gif.images.original.url} alt={gif.title} />
+      <img className="gif" src={gif.images.original.url} alt={gif.title} />
     </>
   );
 }
