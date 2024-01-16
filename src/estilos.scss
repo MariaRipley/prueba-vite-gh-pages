@@ -1,16 +1,32 @@
 body {
   background-color: #1e1e1e;
-}
-
-.form-buscador {
-  padding: 20px;
+  font-family: sans-serif;
   text-align: center;
 }
 
-.buscador {
+.formSearch {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.formSearch-label {
+  color: white;
+}
+
+.formSearch-input {
   padding: 4px;
   box-shadow: 0px 0px 0.3rem #fff;
   border: none;
+}
+
+.formSearch-btn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
 }
 
 .buscador:focus-visible {
